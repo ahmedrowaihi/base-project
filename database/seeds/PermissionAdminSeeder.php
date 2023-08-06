@@ -33,11 +33,21 @@ class PermissionAdminSeeder extends Seeder
             ['name' => 'manage_blogs', 'guard_name' => $guard_name,],
         ];
 
+        $admin = \App\Model\Admin::query()->updateOrCreate([
+            'email' => 'admin@admin.com'
+        ], [
+            'name' => 'Admin',
+            'password' => \Illuminate\Support\Facades\Hash::make(123456789)
+        ]);
         foreach ($dataRoles as $item) {
-            Role::updateOrCreate(['name' => $item['name']], $item);
+            $role = Role::updateOrCreate(['name' => $item['name']], $item);
         }
+        $admin->syncRoles([$role['id']]);
+
         foreach ($data as $item) {
-            Permission::updateOrCreate(['name' => $item['name']], $item);
+            $permission = Permission::updateOrCreate(['name' => $item['name']], $item);
+            $role->givePermissionTo($permission);
         }
+
     }
 }

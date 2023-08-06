@@ -75,43 +75,6 @@
                 </li>
 
 
-                {{--                <li class="menu-item menu-item-submenu {{@$is_active=='users'?'menu-item-active menu-item-open menu-item-here':''}} "--}}
-                {{--                    aria-haspopup="true" data-menu-toggle="hover">--}}
-                {{--                    <a href="javascript:;" class="menu-link menu-toggle">--}}
-                {{--                                        <span class="svg-icon menu-icon">--}}
-                {{--                                            <i class="kt-menu__link-icon fas fa-users"></i>--}}
-                {{--                                        </span>--}}
-                {{--                        <span class="menu-text">@lang('panel.users')</span>--}}
-                {{--                        <i class="menu-arrow"></i>--}}
-                {{--                    </a>--}}
-                {{--                    <div class="menu-submenu">--}}
-                {{--                        <i class="menu-arrow"></i>--}}
-                {{--                        <ul class="menu-subnav">--}}
-
-                {{--                            <li class="menu-item {{@$route_name=='panel.users.index'?'menu-item-active':''}}"--}}
-                {{--                                aria-haspopup="true">--}}
-                {{--                                <a href="{{route('panel.users.index')}}" class="menu-link">--}}
-                {{--                                                    <span class="svg-icon menu-icon">--}}
-                {{--                                                        <i class="fa fa-ellipsis-h"></i>--}}
-                {{--                                                    </span>--}}
-                {{--                                    <span class="menu-text">@lang('constants.all')</span>--}}
-                {{--                                </a>--}}
-                {{--                            </li>--}}
-                {{--                            <li class="menu-item {{@$route_name=='panel.users.create'?'menu-item-active':''}}"--}}
-                {{--                                aria-haspopup="true">--}}
-                {{--                                <a href="{{route('panel.users.create')}}" class="menu-link">--}}
-                {{--                                                    <span class="svg-icon menu-icon">--}}
-                {{--                                                        <i class="fa fa-ellipsis-h"></i>--}}
-                {{--                                                    </span>--}}
-                {{--                                    <span class="menu-text">@lang('constants.add')</span>--}}
-                {{--                                </a>--}}
-                {{--                            </li>--}}
-
-
-                {{--                        </ul>--}}
-                {{--                    </div>--}}
-                {{--                </li>--}}
-
                 @canany(['manage_roles' ,'add_admins', 'show_admins'])
                     <li class="menu-item menu-item-submenu {{@$is_active=='admins'|| @$is_active=='roles'?'menu-item-active menu-item-open menu-item-here':''}} "
                         aria-haspopup="true" data-menu-toggle="hover">
@@ -229,77 +192,6 @@
                 @endcanany
 
 
-                {{--                <li class="menu-section">--}}
-                {{--                    <h4 class="menu-text">@lang('panel.advertisements')</h4>--}}
-                {{--                    <i class="menu-icon ki ki-bold-more-hor icon-md"></i>--}}
-                {{--                </li>--}}
-
-                {{--                <li class="menu-item menu-item-submenu {{@$is_active=='advertisements'|| @$is_active=='advertisments'?'menu-item-active menu-item-open menu-item-here':''}} "--}}
-                {{--                    aria-haspopup="true" data-menu-toggle="hover">--}}
-                {{--                    <a href="javascript:;" class="menu-link menu-toggle">--}}
-                {{--                        <span class="svg-icon menu-icon">--}}
-                {{--						    <i class="fa fa-ad"></i>--}}
-                {{--                        </span>--}}
-                {{--                        <span class="menu-text">@lang('panel.advertisements')</span>--}}
-                {{--                        <i class="menu-arrow"></i>--}}
-                {{--                    </a>--}}
-                {{--                    <div class="menu-submenu">--}}
-                {{--                        <i class="menu-arrow"></i>--}}
-                {{--                        <ul class="menu-subnav">--}}
-                {{--                            --}}{{--                            @permission(['show_settings'])--}}
-
-                {{--                            <li class="menu-item {{@$is_active=='advertisements'?'menu-item-active':''}}"--}}
-                {{--                                aria-haspopup="true">--}}
-                {{--                                <a href="{{route('panel.advertisements.index')}}" class="menu-link">--}}
-                {{--                        <span class="svg-icon menu-icon">--}}
-                {{--                            <i class="kt-menu__link-icon fa fa-ad"></i>--}}
-                {{--                        </span>--}}
-                {{--                                    <span class="menu-text">@lang('panel.advertisements')</span>--}}
-                {{--                                </a>--}}
-                {{--                            </li>--}}
-                {{--                            <li class="menu-item {{@$is_active=='sub_advertisements'?'menu-item-active':''}}"--}}
-                {{--                                aria-haspopup="true">--}}
-                {{--                                <a href="{{route('panel.sub_advertisements.index')}}" class="menu-link">--}}
-                {{--                        <span class="svg-icon menu-icon">--}}
-                {{--                            <i class="kt-menu__link-icon fa fa-ad"></i>--}}
-                {{--                        </span>--}}
-                {{--                                    <span class="menu-text">@lang('panel.subadvertisements')</span>--}}
-                {{--                                </a>--}}
-                {{--                            </li>--}}
-                {{--                            <li class="menu-item {{@$is_active=='banners'?'menu-item-active':''}}" aria-haspopup="true">--}}
-                {{--                                <a href="{{route('panel.banners.index')}}" class="menu-link">--}}
-                {{--                        <span class="svg-icon menu-icon">--}}
-                {{--                            <i class="kt-menu__link-icon fa fa-ad"></i>--}}
-                {{--                        </span>--}}
-                {{--                                    <span class="menu-text">@lang('panel.banners')</span>--}}
-                {{--                                </a>--}}
-                {{--                            </li>--}}
-
-                {{--                        </ul>--}}
-                {{--                    </div>--}}
-                {{--                </li>--}}
-                {{--                <li class="menu-section">--}}
-                {{--                    <h4 class="menu-text">@lang('panel.careers')</h4>--}}
-                {{--                    <i class="menu-icon ki ki-bold-more-hor icon-md"></i>--}}
-                {{--                </li>--}}
-                {{--                <li class="menu-item {{@$is_active=='positions'?'menu-item-active':''}}" aria-haspopup="true">--}}
-                {{--                    <a href="{{route('panel.positions.index')}}" class="menu-link">--}}
-                {{--                        <span class="svg-icon menu-icon">--}}
-                {{--                            <i class="kt-menu__link-icon fa fa-suitcase-rolling"></i>--}}
-                {{--                        </span>--}}
-                {{--                        <span class="menu-text">@lang('panel.positions')</span>--}}
-                {{--                    </a>--}}
-                {{--                </li>--}}
-
-                {{--                <li class="menu-item {{@$is_active=='requests'?'menu-item-active':''}}" aria-haspopup="true">--}}
-                {{--                    <a href="{{route('panel.employement.index')}}" class="menu-link">--}}
-                {{--                        <span class="svg-icon menu-icon">--}}
-                {{--                            <i class="kt-menu__link-icon fa fa-suitcase-rolling"></i>--}}
-                {{--                        </span>--}}
-                {{--                        <span class="menu-text">@lang('panel.emp_requests')</span>--}}
-                {{--                    </a>--}}
-                {{--                </li>--}}
-
                 <li class="menu-section">
                     <h4 class="menu-text">@lang('panel.constants')</h4>
                     <i class="menu-icon ki ki-bold-more-hor icon-md"></i>
@@ -362,7 +254,6 @@
                         </div>
                     </li>
 
-
                 @endcan
 
 
@@ -407,75 +298,11 @@
                     </li>
                 @endcan
 
-                {{--                <li class="menu-item {{@$is_active=='countries'?'menu-item-active':''}}" aria-haspopup="true">--}}
-                {{--                    <a href="{{route('panel.countries.index')}}" class="menu-link">--}}
-                {{--                        <span class="svg-icon menu-icon">--}}
-                {{--                            <i class="kt-menu__link-icon fa fa-globe-asia"></i>--}}
-                {{--                        </span>--}}
-                {{--                        <span class="menu-text">@lang('panel.countries')</span>--}}
-                {{--                    </a>--}}
-                {{--                </li>--}}
-                {{--                <li class="menu-item {{@$is_active=='banks'?'menu-item-active':''}}" aria-haspopup="true">--}}
-                {{--                    <a href="{{route('panel.banks.index')}}" class="menu-link">--}}
-                {{--                        <span class="svg-icon menu-icon">--}}
-                {{--                            <i class="kt-menu__link-icon fas fa-money-check-alt"></i>--}}
-                {{--                        </span>--}}
-                {{--                        <span class="menu-text">@lang('panel.banks')</span>--}}
-                {{--                    </a>--}}
-                {{--                </li>--}}
-
-
-                {{--                <li class="menu-item menu-item-submenu {{@$is_active=='calibers'||@$is_active=='on_bordings'?'menu-item-active menu-item-open menu-item-here':''}} "--}}
-                {{--                    aria-haspopup="true" data-menu-toggle="hover">--}}
-                {{--                    <a href="javascript:;" class="menu-link menu-toggle">--}}
-                {{--                        <span class="svg-icon menu-icon">--}}
-                {{--                                                    <i class="fa fa-ellipsis-h"></i>--}}
-                {{--                        </span>--}}
-                {{--                        <span class="menu-text">@lang('panel.site_constants')</span>--}}
-                {{--                        <i class="menu-arrow"></i>--}}
-                {{--                    </a>--}}
-                {{--                    <div class="menu-submenu">--}}
-                {{--                        <i class="menu-arrow"></i>--}}
-                {{--                        <ul class="menu-subnav">--}}
-
-                {{--                            <li class="menu-item {{@$route_name=='panel.constants.calibers.index'||@$route_name=='panel.constants.calibers.create'?'menu-item-active':''}}"--}}
-                {{--                                aria-haspopup="true">--}}
-                {{--                                <a href="{{route('panel.constants.calibers.index')}}" class="menu-link">--}}
-                {{--                                        <span class="svg-icon menu-icon">--}}
-                {{--                                                    <i class="fa fa-ring"></i>--}}
-                {{--                                        </span>--}}
-                {{--                                    <span class="menu-text">@lang('panel.calibers')</span>--}}
-                {{--                                </a>--}}
-                {{--                            </li>--}}
-
-                {{--                            <li class="menu-item {{@$route_name=='panel.constants.on-bording.index'||@$route_name=='panel.constants.on-bording.create'?'menu-item-active':''}}"--}}
-                {{--                                aria-haspopup="true">--}}
-                {{--                                <a href="{{route('panel.constants.on-bording.index')}}" class="menu-link">--}}
-                {{--                                        <span class="svg-icon menu-icon">--}}
-                {{--                                                    <i class="fa fa-mobile"></i>--}}
-                {{--                                        </span>--}}
-                {{--                                    <span class="menu-text">@lang('panel.on_bording')</span>--}}
-                {{--                                </a>--}}
-                {{--                            </li>--}}
-
-
-                {{--                        </ul>--}}
-                {{--                    </div>--}}
-                {{--                </li>--}}
-                {{--                <li class="menu-section">--}}
-                {{--                    <h4 class="menu-text">@lang('panel.settings')</h4>--}}
-                {{--                    <i class="menu-icon ki ki-bold-more-hor icon-md"></i>--}}
-                {{--                </li>--}}
 
             </ul>
+            <!--end::Menu Nav-->
         </div>
-        </li>
-
-
-        </ul>
-        <!--end::Menu Nav-->
+        <!--end::Menu Container-->
     </div>
-    <!--end::Menu Container-->
-</div>
-<!--end::Aside Menu-->
+    <!--end::Aside Menu-->
 </div>
